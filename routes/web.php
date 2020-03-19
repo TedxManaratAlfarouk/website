@@ -17,9 +17,17 @@ Route::get('/', 'PagesController@index')->name('index');
 Route::get('/about', 'PagesController@about')->name('pages.about');
 Route::get('/contact', 'PagesController@contact')->name('pages.contact');
 
-Auth::routes();
+Auth::routes([
+    'register' => false,
+]);
+Route::get('/register/{key}', 'Auth\RegisterController@showRegistrationForm')->name('auth.registrationform');
+Route::post('/register/{key}', 'Auth\RegisterController@register');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/register', 'Auth\RegisterController@showRegistration')->name('auth.register');
+Route::post('/register', 'Auth\RegisterController@redirectToRegistrationForm');
+
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::resource('/profile', 'ProfileController');
 

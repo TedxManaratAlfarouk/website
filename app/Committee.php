@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Committee extends Model
 {
 
-    public function users(){
+    public function users()
+    {
         return $this->hasMany('App\User');
     }
 }
