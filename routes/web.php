@@ -20,7 +20,7 @@ Route::get('/contact', 'PagesController@contact')->name('pages.contact');
 Auth::routes([
     'register' => false,
 ]);
-Route::get('/register/{key}', 'Auth\RegisterController@showRegistrationForm')->name('auth.registrationform');
+Route::get('/register/{key}', 'Auth\RegisterController@showRegistrationForm')->name('auth.registrationForm');
 Route::post('/register/{key}', 'Auth\RegisterController@register');
 
 Route::get('/register', 'Auth\RegisterController@showRegistration')->name('auth.register');
@@ -29,5 +29,7 @@ Route::post('/register', 'Auth\RegisterController@redirectToRegistrationForm');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
-Route::resource('/profile', 'ProfileController');
+Route::resource('/profile', 'ProfileController',[
+    'except' => [ 'create' ]
+]);
 

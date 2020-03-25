@@ -5,10 +5,11 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name', 'last_name' , 'bio' , 'email', 'password',
+        'first_name', 'last_name' , 'username' , 'bio' , 'email', 'password',
     ];
 
     /**
@@ -38,6 +39,7 @@ class User extends Authenticatable
     ];
 
     public function commitee(){
-        return $this->belongsTo('App\Commitee');
+
+        return $this->belongsTo('App\Committee');
     }
 }

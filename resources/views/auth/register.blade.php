@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <form action="{{route('auth.registrationform', $user->key)}}" method="post">
+        <form action="{{route('auth.registrationForm', $user->key)}}" method="post">
             @csrf
             <div class="form-group">
                 <label for="first_name">First Name</label>
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="text" name="email" class="form-control" value="{{old('email')}}">
+                <input type="email" name="email" class="form-control" value="{{old('email')}}">
                 @error('email')
                 <strong class="text-danger">{{$message}}</strong>
                 @enderror
@@ -47,6 +47,7 @@
                 <strong class="text-danger">{{$message}}</strong>
                 @enderror
             </div>
+            <input type="hidden" name="key" value="{{$user->key}}">
             <input type="submit" name="submit" id="" value="Register" class="btn btn-primary">
         </form>
     </div>

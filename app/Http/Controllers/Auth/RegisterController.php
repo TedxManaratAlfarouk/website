@@ -59,9 +59,10 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
-            'bio' => ['required', 'string', 'max:255'],
+            'bio' => ['required', 'string', 'max:500'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'key' => ['required', 'uuid', 'exists:user_registrations'],
         ]);
     }
 
@@ -76,24 +77,40 @@ class RegisterController extends Controller
         return User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
+            'username' => $this->makeUsername($data),
             'email' => $data['email'],
             'bio' => $data['bio'],
             'password' => Hash::make($data['password']),
         ]);
     }
 
+    private function makeUsername(array $data){
+        $username = $data['first_name'].'-'.$data['last_name'].'-';
+        $number = rand(10,99);
+        while(User::where('username', $username.$number)->exists()){
+            $number = rand(10,99);
+        }
+        return $username.$number;
+    }
+
     /**
-     * shows registration form
+     * shows key input form
      *
      * @param $key string
-     * @return Factory|ؤView
+     * @return Factory|View
      */
     public function showRegistration()
     {
         return view('auth.key');
+//        dd($this->makeUsername([
+//          'first_name' => 'loai',
+//          'second_name' => 'Akram',
+//        ]));
     }
 
     /**
+     * redirects user to the registration form
+     *
      * @param Request $request
      * @return RedirectResponse|Redirector
      */
@@ -103,18 +120,39 @@ class RegisterController extends Controller
         if (UserRegistration::where('key', $key)->doesntExist()) {
             return redirect(route('auth.register'))->withErrors(['key' => 'Key Not Found']);
         }
-        return redirect(route('auth.registrationform', $key));
+        return redirect(route('auth.registrationForm', $key));
 
     }
 
 
     /**
+     * shows the registration form if the UserRegistration key exists
+     *
      * @param $key String
-     * @return Factory|View
+     * @return Factory|RedirectResponse|Redirector|View
      */
     public function showRegistrationForm($key)
     {
-        $userRegistration = UserRegistration::where('key', $key)->firstOrFail();
+        $userRegistrationBuilder = UserRegistration::where('key', $key);
+        if($userRegistrationBuilder->doesntExist()){
+            return redirect(route('auth.register'))->withErrors(['key' => 'Key Not Found']);
+        }
+        $userRegistration = $userRegistrationBuilder->firstOrFail();
         return view('auth.register')->with('user', $userRegistration);
+    }
+
+    /**
+     * The user has been registered.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function registered(Request $request, $user)
+    {
+        $userRegistration = UserRegistration::firstWhere('key', $request->input('key'));
+        $userRegistration->delete();
+        $user->assignRole('Member');
+        return redirect($this->redirectTo);
     }
 }
