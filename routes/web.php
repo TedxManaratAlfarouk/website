@@ -32,4 +32,3 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('/profile', 'ProfileController',[
     'except' => [ 'create' ]
 ]);
-
