@@ -13,19 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'PagesController@index')->name('index');
+Route::get('/about', 'PagesController@about')->name('pages.about');
+Route::get('/contact', 'PagesController@contact')->name('pages.contact');
 
-Route::get('/login', function () {
-    return view('login');
-});
+Auth::routes([
+    'register' => false,
+]);
+Route::get('/register/{key}', 'Auth\RegisterController@showRegistrationForm')->name('auth.registrationForm');
+Route::post('/register/{key}', 'Auth\RegisterController@register');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/register', 'Auth\RegisterController@showRegistration')->name('auth.register');
+Route::post('/register', 'Auth\RegisterController@redirectToRegistrationForm');
 
 
-Auth::routes();
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/profile', 'ProfileController',[
+    'except' => [ 'create' ]
+]);
