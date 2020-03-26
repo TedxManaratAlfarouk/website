@@ -61,7 +61,15 @@ class ProfilePolicy
      */
     public function delete(User $user, User $model)
     {
-        //
+        if ($user->can('delete own profile')){
+            if($user->id == $model->id) {
+                return true;
+            }
+        }
+        if ($user->can('delete all profiles')){
+            return true;
+        }
+        return false;
     }
 
     /**

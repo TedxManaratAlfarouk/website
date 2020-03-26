@@ -4,9 +4,17 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\validator;
+use Illuminate\Validation\Rule;
 
 class ProfileController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +24,7 @@ class ProfileController extends Controller
     public function index()
     {
         $this->authorize('viewAny', User::class);
-        return view('profiles.index');
+        return view('profile.index');
     }
 
     /**
@@ -28,7 +36,7 @@ class ProfileController extends Controller
      */
     public function show($username)
     {
-        $user = User::Where('username', $username)->firstOrFail();
+        $user = User::where('username', $username)->firstOrFail();
         $this->authorize('view', $user);
         return view('profile.show')->with('user', $user);
     }
@@ -43,7 +51,7 @@ class ProfileController extends Controller
     public function edit($username)
     {
         $user = User::Where('username', $username)->firstOrFail();
-        $this->authorize('edit', $user);
+        $this->authorize('update', $user);
         return view('profile.edit')->with('user', $user);
     }
 
@@ -52,13 +60,18 @@ class ProfileController extends Controller
      *
      * @param Request $request
      * @param $username
-     * @return void
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      * @throws \Illuminate\Auth\Access\AuthorizationException
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function update(Request $request, $username)
     {
-        $user = User::Where('username', $username)->firstOrFail();
-        $this->authorize('edit', $user);
+        $user = User::where('username', $username)->firstOrFail();
+        $this->authorize('update', $user);
+        $this->validator($request->all() , $user->id)->validate();
+        $this->updateUser($user , $request->all());
+        return redirect(route('profile.show', $user->username));
+
     }
 
     /**
@@ -67,10 +80,47 @@ class ProfileController extends Controller
      * @param $username
      * @return void
      * @throws \Illuminate\Auth\Access\AuthorizationException
+     * @throws \Exception
      */
     public function destroy($username)
     {
-        $user = User::Where('username', $username)->firstOrFail();
+        $user = User::where('username', $username)->firstOrFail();
         $this->authorize('delete', $user);
+        $user->delete();
+    }
+
+
+    /**
+     * @param array $data
+     * @param $user_id
+     * @return \Illuminate\Contracts\Validation\Validator|\Illuminate\Validation\Validator
+     */
+    private function validator(array $data, $user_id)
+    {
+        return Validator::make($data, [
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'bio' => ['required', 'string', 'max:500'],
+            'email' => ['required', 'string', 'email', 'max:255',
+                Rule::unique('users')->ignore($user_id),
+                ],
+        ]);
+    }
+
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param User $user
+     * @param array $data
+     * @return bool
+     */
+    private function updateUser(User $user,array $data)
+    {
+        return $user->update([
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'email' => $data['email'],
+            'bio' => $data['bio'],
+        ]);
     }
 }

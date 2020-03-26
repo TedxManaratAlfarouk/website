@@ -14,7 +14,7 @@ use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
-use PhpParser\Node\Scalar\String_;
+//use PhpParser\Node\Scalar\String_;
 
 class RegisterController extends Controller
 {
@@ -96,16 +96,11 @@ class RegisterController extends Controller
     /**
      * shows key input form
      *
-     * @param $key string
      * @return Factory|View
      */
     public function showRegistration()
     {
         return view('auth.key');
-//        dd($this->makeUsername([
-//          'first_name' => 'loai',
-//          'second_name' => 'Akram',
-//        ]));
     }
 
     /**
@@ -144,9 +139,10 @@ class RegisterController extends Controller
     /**
      * The user has been registered.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
+     * @param Request $request
+     * @param mixed $user
      * @return mixed
+     * @throws \Exception
      */
     protected function registered(Request $request, $user)
     {
