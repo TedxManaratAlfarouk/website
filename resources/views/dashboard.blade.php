@@ -16,7 +16,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="bg-light">
   <section class="ftco-section-featured ftco-animate">
     <div class="container-fluid" data-scrollax-parent="true">
@@ -25,27 +25,27 @@
         <div class="col-md-3 mb-3">
           <a href="#" class="featured-img">
             <img src="{{ asset('img/ted.png') }}" class="img-fluid" alt="">
-            
+
           </a>
         </div>
-        
+
         <div class="col-md-6">
           <div class="row no-gutters">
             <div class="col-md-12">
               <div class="row no-gutters d-flex align-items-end">
 
                 <div class="col-md-8">
-                  <a href="#" class="featured-img">             
-                    <img src="{{ asset('img/us.jpg') }}" class="img-fluid" alt="">       
+                  <a href="#" class="featured-img">
+                    <img src="{{ asset('img/us.jpg') }}" class="img-fluid" alt="">
                   </a>
                 </div>
 
                 <div class="col-md-4">
-                  <a href="#" class="featured-img">   
-                    <img src="{{ asset('img/logo.jpg') }}" class="img-fluid" alt="">                
+                  <a href="#" class="featured-img">
+                    <img src="{{ asset('img/logo.jpg') }}" class="img-fluid" alt="">
                   </a>
                 </div>
-                
+
               </div>
             </div>
 
@@ -53,12 +53,12 @@
               <div class="row no-gutters d-flex align-items-start">
                 <div class="col-md-8">
                   <a href="#" class="featured-img">
-                    <img src="{{ asset ('img/eunoia.jpg') }}" class="img-fluid" alt="">                        
+                    <img src="{{ asset ('img/eunoia.jpg') }}" class="img-fluid" alt="">
                   </a>
                 </div>
                 <div class="col-md-4">
                   <a href="#" class="featured-img">
-    
+
                     <img src="{{ asset ('img/mrs_maryam.jpg') }}" class="img-fluid" alt="">
                   </a>
                 </div>
@@ -66,7 +66,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-3">
           <a href="#" class="featured-img">
             <img src=" {{ asset ('img/image_2.jpg') }}" class="img-fluid" alt="">
@@ -78,22 +77,22 @@
         <div class="col-md-8 text-center heading-section ftco-animate">
           <h2 class="h1">What is <strong class="px-3">TEDx</strong>?
           <p style="font-size: 20px;">
-            In the spirit of ideas worth spreading, 
-            TED has created a program called TEDx. TEDx is a program of local, 
-            self-organized events that bring people together to share a TED-like experience. 
-            Our event is called TEDx[name], where x = independently organized TED event. 
-            At our TEDx[name] event, TED Talks video and live speakers will combine to spark deep 
-            discussion and connection in a small group. The TED Conference provides general guidance 
-            for the TEDx program, 
+            In the spirit of ideas worth spreading,
+            TED has created a program called TEDx. TEDx is a program of local,
+            self-organized events that bring people together to share a TED-like experience.
+            Our event is called TEDx[name], where x = independently organized TED event.
+            At our TEDx[name] event, TED Talks video and live speakers will combine to spark deep
+            discussion and connection in a small group. The TED Conference provides general guidance
+            for the TEDx program,
             but individual TEDx events, including ours, are self-organized.</p>
         </div>
       </div>
     </div>
   </section>
   </div>
-  
 
-  
+
+
 
   <section class="ftco-section-parallax">
     <div class="parallax-img d-flex align-items-center">
@@ -150,6 +149,7 @@
                   <span class="quote d-flex align-items-center justify-content-center">
                     <i class="icon-quote-left"></i>
                   </span>
+>>>>>>> master:resources/views/home.blade.php
                 </div>
                 <div class="text">
                   <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -205,7 +205,7 @@
       </div>
     </div>
   </section>
-  
+
   <section class="ftco-section ftco-counter" id="section-counter">
     <div class="container">
       <div class="row justify-content-center mb-5 pb-5">

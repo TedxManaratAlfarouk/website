@@ -4,7 +4,7 @@
     <title>TEDx Manarat AlFarouk School</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/open-iconic-bootstrap.min.css') }}">
@@ -29,20 +29,21 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/daterangepicker/daterangepicker.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/util.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
-    
+
   </head>
   <body>
-    
+
  @include('layouts.nav')
-        
+
   @yield('content')
-        
+
   @include('layouts.footer')
-    
-  
+
+
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
 
 
   <script src="{{ asset('js/jquery.min.js') }}"></script>
@@ -64,6 +65,6 @@
   <script src="{{ asset('https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false') }}"></script>
   <script src="{{ asset('js/google-map.js') }}"></script>
   <script src="{{ asset('js/main.js') }}"></script>
-    
+
   </body>
 </html>
