@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="{{ asset('css/ionicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.css') }}">
     <link rel="stylesheet" href="{{ asset('css/jquery.timepicker.css') }}">
-    <link) rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/util.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+{{--    <link rel="stylesheet" href="{{asset('css/app.css')}}">--}}

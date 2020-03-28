@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    
+
 <!-- <div class="js-fullheight"> -->
 <div class="hero-wrap js-fullheight">
   <div class="overlay"></div>
@@ -9,7 +9,7 @@
   <div class="container">
     <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
       <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-        <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
+        <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
         <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">About Us</h1>
       </div>
     </div>
@@ -23,36 +23,36 @@
         <div class="col-md-8 text-center heading-section ftco-animate">
           <h2 class="h1" style="color:red">TEDx, x = independently organized event <br>
             </h2>
-          <p>In the spirit of ideas worth spreading, TEDx is a program of local, 
-            self-organized events that bring people together to share a 
-            TED-like experience. At a TEDx event, TED Talks video and live speakers 
-            combine to spark deep discussion and connection. These local, 
-            self-organized events are branded TEDx, where x = independently organized TED event. 
-            The TED Conference provides general guidance for the TEDx program, but individual 
+          <p>In the spirit of ideas worth spreading, TEDx is a program of local,
+            self-organized events that bring people together to share a
+            TED-like experience. At a TEDx event, TED Talks video and live speakers
+            combine to spark deep discussion and connection. These local,
+            self-organized events are branded TEDx, where x = independently organized TED event.
+            The TED Conference provides general guidance for the TEDx program, but individual
             TEDx events are self-organized. (Subject to certain rules and regulations.)</p>
             <h2 class="h1" style="color:red">TED <br>
             </h2>
-          <p>TED is a 
-              nonprofit organization devoted to Ideas Worth Spreading. 
-              Started as a four-day conference in California 30 years ago, 
-              TED has grown to support its mission with multiple initiatives. 
-              The two annual TED Conferences invite the world's leading thinkers 
-              and doers to speak for 18 minutes or less. Many of these talks are 
-              then made available, free, at TED.com. TED speakers have included Bill Gates, 
-              Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, 
+          <p>TED is a
+              nonprofit organization devoted to Ideas Worth Spreading.
+              Started as a four-day conference in California 30 years ago,
+              TED has grown to support its mission with multiple initiatives.
+              The two annual TED Conferences invite the world's leading thinkers
+              and doers to speak for 18 minutes or less. Many of these talks are
+              then made available, free, at TED.com. TED speakers have included Bill Gates,
+              Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck,
               Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.
-            The annual TED Conference takes place each spring in Vancouver, 
-            British Columbia. TED's media initiatives include TED.com, where new TED 
-            Talks are posted daily; TED Translators, which provides subtitles and interactive 
-            transcripts as well as translations from volunteers worldwide; the educational 
-            initiative TED-Ed. TED has established The Audacious Project that takes a collaborative 
-            approach to funding ideas with the potential to create change at thrilling scale; 
+            The annual TED Conference takes place each spring in Vancouver,
+            British Columbia. TED's media initiatives include TED.com, where new TED
+            Talks are posted daily; TED Translators, which provides subtitles and interactive
+            transcripts as well as translations from volunteers worldwide; the educational
+            initiative TED-Ed. TED has established The Audacious Project that takes a collaborative
+            approach to funding ideas with the potential to create change at thrilling scale;
             TEDx, which supports individuals or groups in hosting local, self- organized TED-style
-             events around the world, and the TED Fellows program, helping world-changing innovators 
-             from around the globe to amplify the impact of their remarkable projects and activities. 
+             events around the world, and the TED Fellows program, helping world-changing innovators
+             from around the globe to amplify the impact of their remarkable projects and activities.
              Follow TED on <a href="http://twitter.com/TEDTalks" style="color:red" target="_blank"> Twitter </a> ,
               or on <a href="http://www.facebook.com/TED" style="color:red" target="_blank"> Facebook </a> </p>
-            
+
         </div>
       </div>
     </div>
@@ -88,7 +88,7 @@
           <p>Cairo, Egypt</p>
         </div>
       </div>
-      
+
     </div>
     </div>
   </div>
