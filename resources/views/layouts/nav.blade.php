@@ -12,9 +12,10 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item {{$route == 'home'? 'active': ''}}"><a href="{{route('home')}}" class="nav-link">Home</a></li>
           <li class="nav-item {{$route == 'pages.about'? 'active': ''}}"><a href="{{route('pages.about')}}" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
           <li class="nav-item"><a href="#" class="nav-link">Watch Us</a></li>
-          <li class="nav-item cta"><a href="#" class="nav-link"><span>Events</span></a></li>
+          <li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Events</a></li>
+          <li class="nav-item cta"><a href="/contact" class="nav-link"><span>Get in touch</span></a></li>
         </ul>
       </div>
     </div>

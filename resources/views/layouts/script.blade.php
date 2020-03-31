@@ -14,6 +14,9 @@
 <script src="{{ asset('js/particles.min.js') }}"></script>
 <script src="{{ asset('js/particle.js') }}"></script>
 <script src="{{ asset('js/scrollax.min.js') }}"></script>
-<script src="{{ asset('js/google-map.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
+<script src="{{ asset('js/jquery.js') }}"></script>
+<script src="{{ asset('js/jquery.backstretch.js') }}"></script>
+<script src="{{ asset('js/all.js') }}"></script>
+
 {{--<script src="{{asset('js/app.js')}}"></script>--}}

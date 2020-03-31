@@ -15,10 +15,15 @@ class PagesController extends Controller
     {
         return view('pages.about');
     }
+    public function blog()
+    {
 
+        return view('pages.blog');
+    }
     public function contact()
     {
 
         return view('pages.contact');
     }
+   
 }

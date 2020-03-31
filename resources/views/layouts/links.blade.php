@@ -1,4 +1,5 @@
 
+    <link rel="stylesheet" href="{{ asset('css/all.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/open-iconic-bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/animate.css') }}">

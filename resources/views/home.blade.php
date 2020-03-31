@@ -11,7 +11,7 @@
           <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Welcome to
              <strong>Our</strong> Website</h1>
           <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-            <a href="#" class="btn btn-primary btn-outline-white px-5 py-3">Get in touch</a></p>
+            <a href="/contact" class="btn btn-primary btn-outline-white px-5 py-3">Get in touch</a></p>
         </div>
       </div>
     </div>
