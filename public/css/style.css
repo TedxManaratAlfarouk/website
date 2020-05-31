@@ -3315,8 +3315,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
-  background-color: rgb(80, 66, 66);
-  border: 1px solid transparent;
+border: 1px solid transparent;
   border-radius: 0.25rem; }
   .navbar-toggler:hover, .navbar-toggler:focus {
     text-decoration: none; }
@@ -7307,7 +7306,7 @@ h1, h2, h3, h4, h5,
   top: 30px; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #404044 !important;
+      background: transparent !important;
       top: 0;
       position: relative; } }
   .ftco-navbar-light .navbar-brand {
@@ -7374,7 +7373,16 @@ h1, h2, h3, h4, h5,
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: .1em; }
-  .ftco-navbar-light.scrolled {
+    .ftco-navbar-light.scrolled #mfis_dark
+    {
+      opacity: 1;
+    }
+    .ftco-navbar-light.scrolled #mfis_logo
+    {
+      opacity: 0;
+    }
+  .ftco-navbar-light.scrolled
+  {
     position: fixed;
     right: 0;
     left: 0;
@@ -7428,16 +7436,19 @@ h1, h2, h3, h4, h5,
       color: #404044 !important; }
       .ftco-navbar-light.scrolled .nav-link.active {
         color: #ee76ad !important; }
-    .ftco-navbar-light.scrolled.awake {
+    .ftco-navbar-light.scrolled.awake 
+    {
       margin-top: 0px;
       -webkit-transition: .3s all ease-out;
       -o-transition: .3s all ease-out;
-      transition: .3s all ease-out; }
+      transition: .3s all ease-out; 
+    }
     .ftco-navbar-light.scrolled.sleep {
       -webkit-transition: .3s all ease-out;
       -o-transition: .3s all ease-out;
       transition: .3s all ease-out; }
-    .ftco-navbar-light.scrolled .navbar-brand {
+    .ftco-navbar-light.scrolled .navbar-brand , #mfis_dark{
+      opacity: 1;
       color: #404044; }
 
 .navbar-brand {
@@ -8208,10 +8219,9 @@ textarea.form-control {
   padding-bottom: 120px; }
 
 #map {
-  height: 40px;
+  height: 400px;
   width: 100%; 
-  position: relative;
-  left: -20px;
+  
   }
   @media (max-width: 991.98px) {
     #map {
@@ -9265,4 +9275,90 @@ textarea.form-control {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  #mfis_logo 
+  {
+    width: 100%;
+    position: relative;
+    left: -50px;
+  }
+  #mfis_dark
+  {
+    width: 100%;
+    position: relative;
+    left: -300px;
+    opacity: 0;
+  }
+
+  @media ( max-width: 768px ) {
+    #mfis_logo
+  {
+    width: 30%;
+    top: 20px;
+    left: 30px;
+    position: relative;
+  }
+  #nav
+  {
+    top:-110px;
+    position: relative;
+    left: 400px;
+    flex: left;
+  }
+  .ftco-navbar-light.scrolled #mfis_dark
+  {
+    width: 50%;
+    top: -20px;
+    left: 30px;
+    position: relative;
+  }
+  .ftco-navbar-light.scrolled #nav
+  {
+    top:-75px;
+    position: relative;
+    left: 500px;
+  }
+  }
+
+  @media ( max-width: 1006px ) {
+    #mfis_logo
+    {
+      width: 100%;
+      left: 100px;
+      position: relative;
+    }
+  }
+  @media ( max-width: 740px ) {
+    #mfis_logo
+    {
+      width: 50%;
+      top: 50px;
+      left: -10px;
+      position: relative;
+    }
+    #nav
+    {
+      width: 30%;
+      left: 500px;
+      position: relative;
+    }
+  }
+  @media ( max-width: 667px ) {
+    #nav
+    {
+      left: 250px;
+      position: relative;
+      top: -60px;
+    }
+    #mfis_logo
+    {
+      left: 10px;
+      position: relative;
+    }
+    .ftco-navbar-light.scrolled #nav
+    {
+      left: 230px;
+      top: -55px;
+      position: relative;
+    }
   }

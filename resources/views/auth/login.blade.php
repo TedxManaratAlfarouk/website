@@ -34,7 +34,7 @@
 							Forgot
 						</span>
 
-						<a href="#" class="txt2" style="color:white">
+					<a href="{{route('auth.register')}}" class="txt2" style="color:white">
 							Username / Password?
 						</a>
 					</li>

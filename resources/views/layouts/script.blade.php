@@ -16,7 +16,11 @@
 <script src="{{ asset('js/scrollax.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
 <script src="{{ asset('js/jquery.js') }}"></script>
+<script src="{{ asset('js/register.js') }}"></script>
 <script src="{{ asset('js/jquery.backstretch.js') }}"></script>
 <script src="{{ asset('js/all.js') }}"></script>
+<script src="{{ asset('js/argon.js') }}"></script>
+<script src="{{ asset('js/canvas.js') }}"></script>
+
 
 {{--<script src="{{asset('js/app.js')}}"></script>--}}

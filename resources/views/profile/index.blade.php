@@ -97,13 +97,14 @@
 			<div class="contact">
 				<h2>Info</h2>
 					<p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
-					<p><i class="fa fa-phone"></i> User's Phone</p>
                     <p><i class="fa fa-envelope"></i> User's Email</p>
                     <hr style="color:black">
-                    <h6>Basic Information</h6>
-                    <p><i class="fas fa-birthday-cake" style="color:red"></i> 48/01/19</p>
-                    <p> <span style="color:red">Gender: </span><i class="fas fa-mars"></i> / <i class="fas fa-venus"></i></p> 
-
+                    <h6>Project Links:</h6>
+					<a href="#"><i class="fab fa-facebook-f fa-lg"></i></a>
+					<a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+					<a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-behance fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-dribbble fa-lg"></i></a>
 			</div>
 		</div>
 		<div class="col-md-8 col-sm-12" >

@@ -84,14 +84,25 @@
             <span class="name">Asmaa Fawzy</span>
             <span class="position">Co-organizer </span>
           </div>
-          <img src="" alt="" class="img-fluid mb-3">
+          <img src="/img/mrs_asmaa.jpeg" alt="" class="img-fluid mb-3">
           <p>Cairo, Egypt</p>
         </div>
       </div>
-
-    </div>
+    {{-- <div class="col-md-4 mb-5 ftco-animate">
+      <div class="block-10">
+        <div class="person-info mb-2">
+          <span class="name">Head</span>
+          <span class="position">Co-organizer </span>
+        </div>
+        <img src="/img/mrs_asmaa.jpeg" alt="" class="img-fluid mb-3">
+        <p>Cairo, Egypt</p>
+      </div>
+    </div> --}}
+  
+  </div>
     </div>
   </div>
 </div>
 </section>
+
 @endsection

@@ -374,9 +374,23 @@ $(window).load(function(){
 $(function(){
     jQuery(document).ready(function() {
 		$('body').backstretch([
-	 		 "images/tm-bg-slide-1.jpg", 
-	 		 "images/tm-bg-slide-2.jpg",
-			 "images/tm-bg-slide-3.jpg"
+	 		 "img/tm-bg-slide-1.jpg", 
+	 		 "img/tm-bg-slide-2.jpg",
+			 "img/tm-bg-slide-3.jpg"
 	 			], 	{duration: 3200, fade: 1300});
 		});
 })
+$('#modal1').on('hidden.bs.modal', function (e) {
+	// do something...
+	$('#modal1 iframe').attr("src", $("#modal1 iframe").attr("src"));
+  });
+  
+  $('#modal6').on('hidden.bs.modal', function (e) {
+	// do something...
+	$('#modal6 iframe').attr("src", $("#modal6 iframe").attr("src"));
+  });
+  
+  $('#modal4').on('hidden.bs.modal', function (e) {
+	// do something...
+	$('#modal4 iframe').attr("src", $("#modal4 iframe").attr("src"));
+  });

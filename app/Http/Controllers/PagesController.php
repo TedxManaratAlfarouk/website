@@ -20,6 +20,16 @@ class PagesController extends Controller
 
         return view('pages.blog');
     }
+    public function watchus()
+    {
+
+        return view('pages.watchus');
+    }
+    public function events()
+    {
+
+        return view('pages.events');
+    }
     public function contact()
     {
 

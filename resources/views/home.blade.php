@@ -106,7 +106,7 @@
               <div class="col-md-6">
                 <form action="#" class="subscribe-form">
                   <div class="form-group">
-                    <span class="icon icon-paper-plane"></span>
+                    <a href="#"><span class="icon icon-paper-plane"></span></a>
                     <input type="text" class="form-control" placeholder="Enter email address">
                   </div>
                 </form>

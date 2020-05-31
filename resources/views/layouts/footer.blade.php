@@ -13,8 +13,8 @@
             <ul class="list-unstyled">
               <li><a href="/" class="py-2 d-block">Home</a></li>
               <li><a href="/about" class="py-2 d-block">About</a></li>
-              <li><a href="#" class="py-2 d-block">Events</a></li>
-              <li><a href="#" class="py-2 d-block">Watch Us</a></li>
+              <li><a href="/events" class="py-2 d-block">Events</a></li>
+              <li><a href="/watch-us" class="py-2 d-block">Watch Us</a></li>
               <li><a href="/contact" class="py-2 d-block">Contact</a></li>
               <li><a href="/login" class="py-2 d-block">Login</a></li>
 

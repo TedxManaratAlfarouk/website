@@ -8,7 +8,8 @@
     @include('layouts.links')
   </head>
   <body>
-    
+    @yield('dashboard')
+
  @include('layouts.nav')
         
   @yield('content')
@@ -22,6 +23,5 @@
 
 
   @include('layouts.script')
-    
   </body>
 </html>
